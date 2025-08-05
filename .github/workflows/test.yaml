@@ -8,8 +8,14 @@ jobs:
     steps:
     - name: Git Clone
       uses: actions/checkout@v4
-    - name: Run ls command
-      run: ls -la
+      
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v3
+      with:
+        terraform_version: "1.12.2"
+
+    - name: Init
+      run: terraform init
 
 
 
