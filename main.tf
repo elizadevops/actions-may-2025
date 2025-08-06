@@ -10,7 +10,7 @@ resource aws_instance web {
 terraform {
   backend "s3" {
     bucket = "kaizen-eliza-1"
-    key = "terraform.tfstate"
+    key    = "terraform.tfstate"
     region = "us-east-1"
   }
 }
